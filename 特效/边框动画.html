@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+	box-sizing: border-box;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background: #a5b6c7;
+}
+
+.draw::before, .draw::after {
+	box-sizing: border-box;
+	content: '';
+	position: absolute;
+	border: 2px solid transparent;
+	width: 0;
+	height: 0;
+}
+
+.draw::before {
+	top: 0;
+	left: 0;
+	animation: myfirst1 10s linear infinite;
+	-moz-animation: myfirst1 10s linear infinite; /* Firefox */
+	-webkit-animation: myfirst1 10s linear infinite; /* Safari and Chrome */
+	-o-animation: myfirst1 10s linear infinite; /* Opera */
+}
+
+.draw::after {
+	bottom: 0;
+	right: 0;
+	animation: myfirst2 10s linear infinite;
+	-moz-animation: myfirst2 10s linear infinite; /* Firefox */
+	-webkit-animation: myfirst2 10s linear infinite; /* Safari and Chrome */
+	-o-animation: myfirst2 10s linear infinite; /* Opera */
+}
+
+@keyframes myfirst1{
+	0%{top:0;left:0}
+	25%{width:100%;height:0;border-top-color:red;border-right-color:transparent}
+	50%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+	100%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+}
+@-moz-keyframes myfirst1{
+	0%{top:0;left:0}
+	25%{width:100%;height:0;border-top-color:red;border-right-color:transparent}
+	50%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+	100%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+}
+@-webkit-keyframes myfirst1{
+	0%{top:0;left:0}
+	25%{width:100%;height:0;border-top-color:red;border-right-color:transparent}
+	50%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+	100%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+}
+@-o-keyframes myfirst1{
+	0%{top:0;left:0}
+	25%{width:100%;height:0;border-top-color:red;border-right-color:transparent}
+	50%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+	100%{width:100%;height:100%;border-top-color:red;border-right-color:red}
+}
+@keyframes myfirst2{
+	0%{bottom:0;right:0}
+	50%{width:0;height:0;border-color:transparent}
+	75%{width:100%;height:0;border-bottom-color:red;border-left-color:transparent}
+	100%{width:100%;height:100%;border-bottom-color:red;border-left-color:red}
+}
+@-moz-keyframes myfirst2{
+	0%{bottom:0;right:0}
+	50%{width:0;height:0;border-color:transparent}
+	75%{width:100%;height:0;border-bottom-color:red;border-left-color:transparent}
+	100%{width:100%;height:100%;border-bottom-color:red;border-left-color:red}
+}
+@-webkit-keyframes myfirst2{
+	0%{bottom:0;right:0}
+	50%{width:0;height:0;border-color:transparent}
+	75%{width:100%;height:0;border-bottom-color:red;border-left-color:transparent}
+	100%{width:100%;height:100%;border-bottom-color:red;border-left-color:red}
+}
+@-o-keyframes myfirst{
+	0%{bottom:0;right:0}
+	50%{width:0;height:0;border-color:transparent}
+	75%{width:100%;height:0;border-bottom-color:red;border-left-color:transparent}
+	100%{width:100%;height:100%;border-bottom-color:red;border-left-color:red}
+}
+</style>
+</head>
+<body>
+
+<div class="draw"></div>
+
+</body>
+</html>
